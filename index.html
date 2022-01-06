@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>The witcher/netflix</title>
+  
+</head>
+<body>
+    <header>
+        <a href="#" class="Logo"><img src="./images/logo.png" alt="logo"></a>
+        <ul class="nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">Filmes</a></li>
+            <li><a href="">Series</a></li>
+            <li><a href="">Animes</a></li>
+            <li><a href="">MyList</a></li>
+
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="./images/bg.jpg" class="bg"  alt="banner">
+        <div class="content">
+            <img src="./images/name.png" class="title" alt="name">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>action</span>
+
+            </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quasi, eos est itaque voluptatem vitae. Magnam velit, facilis explicabo obcaecati at quia, dignissimos cumque voluptates eligendi beatae cupiditate officia consequuntur.</p>
+            <div class="buttons">
+                <a href=""><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+                <a href=""><i class="fa fa-plus-circle" aria-hidden="true"></i>My List</a>
+
+
+            </div>   
+             
+        </div>
+        <a class="play" onclick="toggleVideo();" ><img src="./images/play.png" alt="play">Watch trailer</a>
+
+    </div>
+    <div class="trailer">
+  <video src="./images/trailer.mp4" controls="true"></video>
+  <img src="./images/close.png" onclick="toggleVideo();" class="close" alt="">
+
+    </div>
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer')
+            const video = document.querySelector('.video')
+            trailer.classList.toggle('active')
+            video.currentTime =0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
